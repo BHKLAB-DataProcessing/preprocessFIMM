@@ -21,8 +21,19 @@ symSetDiff <- function(x,y) return(setdiff(union(x,y), intersect(x,y)))
 cell.all <- read.csv("/pfs/downAnnotations/cell_annotation_all.csv")
 drug.all <- read.csv("/pfs/downAnnotations/drugs_with_ids.csv")
 
-sens.processed <- as.data.frame(read_excel("/pfs/FIMMdata/nature20171-s1.xls"))
-sens.raw <- as.data.frame(read_excel("/pfs/FIMMdata/nature20171-s2.xlsx"))
+message("pfs files:")
+message(list.files("/pfs/"))
+
+message("FIMMdata files:")
+
+message(list.files("/pfs/FIMMdata/"))
+
+
+file.copy("/pfs/FIMMdata/nature20171-s1.xls", "/pfs/out/nature20171-s1.xls")
+file.copy("/pfs/FIMMdata/nature20171-s2.xlsx", "/pfs/out/nature20171-s2.xlsx")
+
+sens.processed <- as.data.frame(read_excel("/pfs/out/nature20171-s1.xls"))
+sens.raw <- as.data.frame(read_excel("/pfs/out/nature20171-s2.xlsx"))
 
 
 ## Creating curation cell and drug table to resolve mismatches between processed and raw data
