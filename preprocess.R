@@ -172,7 +172,7 @@ saveRDS(sens.prof, file="/pfs/out/sens.prof.rds")
 
 saveRDS(sens.raw.array, file="/pfs/out/sens.raw.rds")
 
-
+sens.raw <- sens.raw.array
 
 dir.create("/pfs/out/slices/")
 
