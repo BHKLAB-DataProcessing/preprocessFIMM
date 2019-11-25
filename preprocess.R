@@ -32,8 +32,8 @@ drug.all <- read.csv("/pfs/downAnnotations/drugs_with_ids.csv")
 # file.copy("/pfs/FIMMdata/nature20171-s1.xls", "/pfs/out/nature20171-s1.xls")
 # file.copy("/pfs/FIMMdata/nature20171-s2.xlsx", "/pfs/out/nature20171-s2.xlsx")
 
-sens.processed <- as.data.frame(read_excel("/pfs/downloadFIMM/nature20171-s1.xls"))
-sens.raw <- as.data.frame(read_excel("/pfs/downloadFIMM/nature20171-s2.xlsx"))
+sens.processed <- as.data.frame(read_excel("/pfs/downFIMM/nature20171-s1.xls"))
+sens.raw <- as.data.frame(read_excel("/pfs/downFIMM/nature20171-s2.xlsx"))
 
 
 ## Creating curation cell and drug table to resolve mismatches between processed and raw data
